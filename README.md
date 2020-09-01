@@ -1,6 +1,6 @@
 # Leet-Code-submissions-September2020
 This repository contains my solutions for September LeetCoding Challenge.
-- [ ] Day 1
+- [x] Day 1
 - [ ] Day 2
 - [ ] Day 3
 - [ ] Day 4
