@@ -16,5 +16,27 @@
 # :bento: Solution
 
 ```
-
+class Solution {
+    public String largestTimeFromDigits(int[] arr) {
+        int i,j,k,l;
+        String res="",hr,time,min;
+        for(i=0;i<4;i++){
+            for(j=0;j<4;j++){
+                for(k=0;k<4;k++){
+                    if(i==j || j==k || k==i){
+                        continue;
+                    }
+                    hr=""+arr[i]+arr[j];
+                    min=""+arr[k]+arr[6-i-j-k];
+                    time=hr+":"+min;
+                    if(hr.compareTo("24")<0 && min.compareTo("60")<0 && res.compareTo(time)<0){
+                        res=time;
+                    }
+                }
+            }
+        }
+          return res;
+    }
+  
+}
 ```
