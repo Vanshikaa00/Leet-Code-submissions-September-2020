@@ -16,6 +16,7 @@
 # :bento: Solution
 
 ```
+
 class Solution {
     public String largestTimeFromDigits(int[] arr) {
         int i,j,k,l;
