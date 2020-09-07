@@ -21,6 +21,28 @@
 
 # :bento: Solution
 ```
-
+class Solution {
+    private int overlappedOnes(int[][] A,int[][] B,int ro,int co){
+        int r,c,count=0;
+        for(r=0;r<A.length;r++){
+            for(c=0;c<A[0].length;c++){
+                if((r+ro<0 || r+ro>=A.length)||(c+co<0 || c+co>=A[0].length))
+                    continue;
+                if(A[r][c]+B[r+ro][c+co]==2)
+                    count++;
+            }
+        }
+        return count;
+    }
+    public int largestOverlap(int[][] A, int[][] B) {
+        int r,c,largestOnes=0;
+        for(r=-A.length+1;r<A.length;r++){
+            for(c=-A[0].length+1;c<A.length;c++){
+                largestOnes=Math.max(largestOnes,overlappedOnes(A,B,r,c));
+            }
+        }
+        return largestOnes;
+    }
+}
 
 ```
