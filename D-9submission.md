@@ -38,5 +38,55 @@
 
 # :bento: Solution
 ```
-
+class Solution {
+   public int util(int[] arr1,int[] arr2){
+        int i,j,ans=0;
+         for(i=0;i<arr1.length;i++){
+          if(arr1[i]>arr2[i])
+          return 1;
+          if(arr1[i]<arr2[i])
+          return -1;
+      }
+      return ans;
+    }
+  public int compareVersion (String version1, String version2)
+  {
+      String str1[]=version1.split("[.]");
+      String str2[]=version2.split("[.]");
+      int i,j=0,k=0,ll1=str1.length,ll2=str2.length,ans=0,l1,l2,arr1[],arr2[];
+      if(ll1==ll2){
+          arr1=new int[ll1];
+          arr2=new int[ll2];
+          for(i=0;i<ll1;i++)
+          arr1[j++]=Integer.parseInt(str1[i]);
+           for(i=0;i<ll2;i++)
+          arr2[k++]=Integer.parseInt(str2[i]);  
+          ans=util(arr1,arr2);
+      }
+      if(ll1>ll2){
+          j=0;
+          k=0;
+          arr1=new int[ll1];
+          arr2=new int[ll1];
+          for(i=0;i<ll1;i++)
+          arr1[j++]=Integer.parseInt(str1[i]);
+           for(i=0;i<ll2;i++)
+          arr2[k++]=Integer.parseInt(str2[i]); 
+          ans=util(arr1,arr2);
+      }
+      if(ll1<ll2){
+             j=0;
+          k=0;
+          arr1=new int[ll2];
+          arr2=new int[ll2];
+          for(i=0;i<ll1;i++)
+          arr1[j++]=Integer.parseInt(str1[i]);
+           for(i=0;i<ll2;i++)
+          arr2[k++]=Integer.parseInt(str2[i]);
+          ans=util(arr1,arr2);
+          
+      }
+      return ans;
+  }
+}
 ```
