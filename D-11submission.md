@@ -1,4 +1,4 @@
-# :japanese_goblin: Question-Product of Longest Subarray
+# :japanese_goblin: Question-Maximum Product Subarray
 
 > Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product.  
 > Example 1:  
