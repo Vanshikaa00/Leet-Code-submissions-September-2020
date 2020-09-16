@@ -9,6 +9,7 @@
 > Explanation: The maximum result is 5 ^ 25 = 28.
 
 # :bento: Solution
+
 ```
 class Solution {
     public int findMaximumXOR(int[] nums) {
