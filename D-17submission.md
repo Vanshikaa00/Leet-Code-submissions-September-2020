@@ -29,6 +29,7 @@
 # :bento: Solution
 
 ```
+
 class Solution {
     public boolean isRobotBounded(String instructions) {
         if(instructions==null)
